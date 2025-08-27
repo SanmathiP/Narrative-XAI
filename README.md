@@ -11,8 +11,6 @@ This repository contains a research prototype developed for a master’s thesis 
 
 - Installation and setup
 
-- Data requirements and configuration
-
 - Running the application
 
 - Usage guide
@@ -28,6 +26,8 @@ This repository contains a research prototype developed for a master’s thesis 
 - Troubleshooting
 
 - Licensing and citation
+
+- Outputs
 
 ## 1. Motivation and Contributions
 
@@ -103,29 +103,12 @@ OPENAI_API_KEY=sk-xxxx...
 
 The application reads OPENAI_API_KEY using python-dotenv.
 
-
-## 4. Data Requirements and Configuration
-
-This repository is configured for a small demonstration subset. It does not include the full DVM-CAR dataset.
-
-Required local files (small, demo scale):
-
-#### data/field_samples_final.json
-JSON mapping Genmodel_ID to Image_path.
-
-#### outputs/merged_field_metadata.csv
-Metadata for dropdown filters (Fuel_type, Genmodel, Genmodel_ID).
-
-#### outputs/shap_input.csv
-Background data for SHAP explainer.
-
-#### outputs/price_model.pkl
-Trained regression model.
-
-Do not commit large datasets. See docs/README_dataset.md for details.
+### 3.5 Data Source
+ [DVM-CAR dataset](https://deepvisualmarketing.github.io/)
 
 
-## 5. Running the Application
+
+## 4. Running the Application
 
 From the repository root:
 ```bash
@@ -136,7 +119,9 @@ Open http://127.0.0.1:7860 in a browser.
 The Streamlit version is in apps/app_streamlit.py.
 
 
-## 6. Usage Guide
+
+
+## 5. Usage Guide
 
 1. Select a fuel type, genmodel, sample ID, and image.
 
@@ -154,16 +139,16 @@ The Streamlit version is in apps/app_streamlit.py.
 
 
 
-## 7. Narrative and Explanation Design
-### 7.1 SHAP (Tabular)
+## 6. Narrative and Explanation Design
+### 6.1 SHAP (Tabular)
 
 SHAP values quantify the marginal contribution of each feature to the model’s prediction for the selected sample. The force plot shows direction and magnitude relative to a baseline.
 
-### 7.2 Grad-CAM (Image)
+### 6.2 Grad-CAM (Image)
 
 Grad-CAM highlights which regions of the input image most influenced the model’s reasoning. This prototype uses MobileNet-V2 for demonstration.
 
-### 7.3 Orchestration and Narration
+### 6.3 Orchestration and Narration
 
 Instead of showing two disconnected explanations, the system integrates them. The narrative engine generates a short story:
 
@@ -177,7 +162,7 @@ Instead of showing two disconnected explanations, the system integrates them. Th
 
 - Action (next step or counterfactual)
 
-## 8. Bias and Robustness Probes
+## 7. Bias and Robustness Probes
 
 The app includes preset questions for critical evaluation, such as:
 
@@ -189,7 +174,7 @@ The app includes preset questions for critical evaluation, such as:
 
 - Are predictions stable when gearbox type is swapped?
 
-## 9. Voice Input and Output
+## 8. Voice Input and Output
 
 - Speech-to-text: microphone input transcribed with Whisper or equivalent.
 
@@ -197,7 +182,7 @@ The app includes preset questions for critical evaluation, such as:
 
 - Both are optional.
 
-## 10. Limitations and Future Work
+## 9. Limitations and Future Work
 
 ### Limitations:
 
@@ -219,7 +204,7 @@ The app includes preset questions for critical evaluation, such as:
 
 - Improve fairness monitoring with automated probes.
 
-### 11. Troubleshooting
+## 10. Troubleshooting
 
 - Styles not applied: clear browser cache, confirm CSS injection.
 
@@ -229,10 +214,25 @@ The app includes preset questions for critical evaluation, such as:
 
 - CUDA issues: ensure correct torch/torchvision version or run CPU-only.
 
-### 12. Licensing and Citation
+## 11. Licensing and Citation
 
 - Choose a license (MIT recommended).
 
 - Dataset attribution: [DVM-CAR dataset](https://deepvisualmarketing.github.io/)
 
 - Cite SHAP, Grad-CAM, and this repository if used in academic work.
+
+## 12. Outputs
+
+  ### 1. UI outlook with selection according to multiple features, SHAP and GRAD-CAM plot, bias based questionnaires dropdown, background theme and narrative modes with voice based conversation option
+<p align="center"><img width="1920" height="1750" alt="protoC_UI_full" src="https://github.com/user-attachments/assets/36684a20-9124-4d3d-8b6c-5d018d5cf160" />
+
+
+  
+  ### 2. Optional voice input and output feature
+<img width="1373" height="885" alt="voice enabled conversation" src="https://github.com/user-attachments/assets/717010af-b047-4bb9-9950-a418400b1c4e" />
+
+
+  
+  ### 3. Bias questions and narrative explanations
+<img width="1715" height="897" alt="example bias shorcut questions 2" src="https://github.com/user-attachments/assets/caf5a712-a180-4165-b6b3-fb62905d1ed9" />
