@@ -224,15 +224,15 @@ The app includes preset questions for critical evaluation, such as:
 
 ## 12. Outputs
 
-  ### 1. UI outlook with selection according to multiple features, SHAP and GRAD-CAM plot, bias based questionnaires dropdown, background theme and narrative modes with voice based conversation option
+  #### 1. UI outlook with selection according to multiple features, SHAP and GRAD-CAM plot, bias based questionnaires dropdown, background theme and narrative modes with voice based conversation option
 <p align="center"><img width="1920" height="1750" alt="protoC_UI_full" src="https://github.com/user-attachments/assets/36684a20-9124-4d3d-8b6c-5d018d5cf160" />
 
 
   
-  ### 2. Optional voice input and output feature
+  #### 2. Optional voice input and output feature
 <img width="1373" height="885" alt="voice enabled conversation" src="https://github.com/user-attachments/assets/717010af-b047-4bb9-9950-a418400b1c4e" />
 
 
   
-  ### 3. Bias questions and narrative explanations
+  #### 3. Bias questions and narrative explanations
 <img width="1715" height="897" alt="example bias shorcut questions 2" src="https://github.com/user-attachments/assets/caf5a712-a180-4165-b6b3-fb62905d1ed9" />
