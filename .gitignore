@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+.venv*/
+.ipynb_checkpoints/
+
+# Local settings & secrets
+.env
+*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data & models (keep small demo files only)
+data/*
+!data/field_samples_final.json
+
+outputs/*
+!outputs/.gitkeep
+# If your demo metadata/model are small and you want them in git, comment out the two lines above
+# and add allowlists, e.g.:
+#!outputs/merged_field_metadata.csv
+#!outputs/shap_input.csv
+#!outputs/sample_bmw.jpg
+#!outputs/price_model.pkl
+
+# Logs & artifacts
+*.log
+*.tmp
+
+
+
+filtered_csvdata/
+image_data/*
+outputs/*
+tables_V2.0/*
+app.py
+chat_agent.py
+chat_agent_llm_kb.py
+data_loader.py
+data_loader_lab.py
+explain_image.py
+explain_tabular.py
+field_app_advanced_llm.py
+field_app_advanced.py
+field_app.py
+filter_csv_data.py
+filter_valid_lab_samples.py
+generate_lab_samples.py
+lab_app.py
+narrative_engine.py
+tables_V2.0.zip
+test_shap_plot.py
+train_model.py
+validate_lab_samples.py
+lab_samples_final.json
+lab_samples_valid.json
+lab_samples.json
+Confirmed_fronts.zip
